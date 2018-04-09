@@ -6,4 +6,7 @@ import net.skhu.domain.Student;
 
 public interface StudentRepository extends MongoRepository<Student, String>{
 
+	Student findById(int id);
+
+
 }

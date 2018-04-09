@@ -23,6 +23,7 @@ public class Student {
     String studentNumber;
     String name;
     int year;
+    int departmentId;
 
     @ManyToOne
     @JoinColumn(name = "departmentId")
