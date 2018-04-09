@@ -3,10 +3,10 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>jpa1</title>
+  <title>mongo</title>
 </head>
 <body>
-<h1>jpa1</h1>
+<h1>mongo</h1>
 
 <a href="student/list">student/list</a> <br />
 

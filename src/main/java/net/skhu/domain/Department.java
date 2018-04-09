@@ -2,32 +2,23 @@ package net.skhu.domain;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
+
 @Data
-@Document(collection="Student")
-public class Student {
+@Document(collection="department")
+public class Department {
 
 	String _id;
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	int id;
+    int id;
 
-    String studentNumber;
-    String name;
-    int year;
-
-    @ManyToOne
-    @JoinColumn(name = "departmentId")
-    Department department;
-
-
+    String departmentName;
 
 }
