@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<c:url var="R" value="/" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,15 +10,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="/jpa2/res/common.css">
+<script src="${R}res/common.js"></script>
+<link rel="stylesheet" href="${R}res/common.css">
 </head>
 <body>
 <div class="container">
-  <h1>학생 정보</h1>
+  <h1>학생 ${ title }</h1>
   <form:form method="post" modelAttribute="student">
     <div class="form-group">
-      <label>학번:</label>
-      <form:input path="studentNumber" class="form-control w200" />
+        <label>학번:</label>
+        <form:input path="studentNumber" class="form-control w200" />
     </div>
     <div class="form-group">
       <label>이름:</label>
@@ -35,12 +37,18 @@
     <button type="submit" class="btn btn-primary">
       <i class="glyphicon glyphicon-ok"></i> 저장
     </button>
-    <a href="list" class="btn btn-default">
-      <i class="icon icon-list"></i> 목록으로
+    <c:if test="${ student.id > 0 }">
+      <a href="delete?pg=${ pagination.pg }&id=${ student.id }" class="btn btn-danger"
+         data-confirm-delete>
+        <i class="glyphicon glyphicon-trash"></i> 삭제
+      </a>
+    </c:if>      
+    <a href="list?pg=${ pagination.pg }" class="btn btn-default">
+      <i class="glyphicon glyphicon-list"></i> 목록으로
     </a>
   </form:form>
   <c:if test="${ not empty message }">
-    <div class="alert alert-info">${ message }</div>
+    <br /><div class="alert alert-info">${ message }</div>
   </c:if>
 </div>
 </body>
