@@ -20,7 +20,18 @@ public class StudentService {
 
 	public void save(Student student) {
 
+		int count= (int)studentRepository.count()+1;
+
+		student.setId(count);
+
 		 studentRepository.save(student);
+	}
+
+
+	public void update(Student student) {
+
+
+
 	}
 
 	public Student findById(int id) {
@@ -32,7 +43,13 @@ public class StudentService {
 	}
 
 	public void delete(int id) {
-		studentRepository.deleteById(id);
+
+		System.out.println("Studentservice" +id);
+
+		Student student = new Student();
+		student=studentRepository.findById(id);
+
+		studentRepository.delete(student);
 
 	}
 

@@ -35,14 +35,14 @@ public class StudentController {
 
 
     @RequestMapping(value="edit", method=RequestMethod.GET)
-    public String edit(@RequestParam("id") int id, Model model) {
+    public String edit(@RequestParam("id") int id, Pagination pagination,  Model model) {
         model.addAttribute("departments", departmentService.findAll());
         model.addAttribute("student", studentService.findById(id));
         return "student/edit";
     }
 
     @RequestMapping(value="edit", method=RequestMethod.POST)
-    public String edit(Student student, Model model) {
+    public String edit(Student student,Pagination pagination,  Model model) {
         studentService.save(student);
         model.addAttribute("departments", departmentService.findAll());
         model.addAttribute("message", "저장했습니다.");
@@ -68,11 +68,12 @@ public class StudentController {
 
     @RequestMapping("delete")
     public String delete(@RequestParam("id") int id, Pagination pagination, Model model) {
+
+    	System.out.print("contorller"+id);
+
         studentService.delete(id);
         return "redirect:list?pg=" + pagination.getPg();
     }
-
-
 
 
 }
