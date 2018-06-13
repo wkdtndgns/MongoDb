@@ -8,8 +8,8 @@
  # 프로젝트 개요
    <p>
    &nbsp;&nbsp; &nbsp;  NoSql인 MongoDb를 db로 사용하였습니다. </p>
-   <p> &nbsp;&nbsp; &nbsp;  MySQL에서 사용한 db를 mongoDb로 import 해서 사용했습니다.</p>
-   <p> &nbsp;&nbsp; &nbsp;  student1.sql을 import 해서 MongoDb로 CRUD작업을 진행했습니다. </p>
+   <p> &nbsp;&nbsp; &nbsp;  MySQL에서 사용한 db인 student1.sql을 mongoDb로 import 해서 사용했습니다.</p>
+   <p> &nbsp;&nbsp; &nbsp;  JPA로 CRUD작업을 진행했습니다. </p>
    
   <br/>
   
@@ -48,5 +48,5 @@ Create 화면입니다.  </p>
  
  
  <br/>
- <p> 몽고 디비에 외래키 설정이 없어서 조인을 할 수 없고 AI 설정이 아님 objectId 증가 설정으로 인해 여러가지 문제가 있었지만
- db안에서 정상 작동 되도록 구현했습니다.  </p>
+ <p> 몽고 디비에 외래키 설정이 없어서 조인을 할 수 없고 AI 설정이 아님 objectId 설정으로 인해 여러가지 문제가 있었지만
+ db안에서 정상 작동 되었습니다. </p>
