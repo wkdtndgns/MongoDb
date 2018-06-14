@@ -13,14 +13,17 @@
    
   <br/>
   
- # 사용 기술
- 
- <img src="https://user-images.githubusercontent.com/24237454/41213785-6dbd60fe-6d82-11e8-9540-ded5d9fadbbf.PNG" width="300px"  >
- <img src="https://user-images.githubusercontent.com/24237454/41213824-bfd8ad08-6d82-11e8-9f46-f22004592f28.PNG" width="300px" >
- <img src="https://user-images.githubusercontent.com/24237454/41213808-a55273ce-6d82-11e8-81eb-b37dc59ae083.PNG" width="300px" >
+ # 사용 기술 
+  <br/>
+  
+  
+![mongo](https://user-images.githubusercontent.com/24237454/41399187-9b41c3d4-6ff4-11e8-84b6-9b89b3f591a1.PNG)
+
+- 빨간색 : 소스코드, 문서 등을 저장한 공간소와 배포 서버 안내.
+- 파란색 : Front-End 영역.
+- 초록색 : Back-End 영역.
 
  
-  <br/>
  
  # 프로젝트 설명
  
